@@ -9,8 +9,11 @@
 
 */
 
-// importar o express
+// importar express
 import express from 'express'
+
+// importar cors
+import cors from 'cors'
 
 // Importar o Prisma
 import { PrismaClient } from '@prisma/client'
@@ -22,6 +25,7 @@ const app = express()
 
 // Avisar o express que vamos utilizar JSON
 app.use(express.json())
+app.use(cors())
 
 /* Criar uma rota que devolve algo 
     1) Tipo de Rota / Método HTTP (Com requisição - req e resposta - res)
